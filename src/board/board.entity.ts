@@ -48,7 +48,10 @@ export class Board extends BaseEntity {
     updatedAt: string;
 
     @Column()
-    updator: number;
+    updatorId: number;
+
+    @Column()
+    updatorName: number;
 
     @Column()
     isBookMarked: number;

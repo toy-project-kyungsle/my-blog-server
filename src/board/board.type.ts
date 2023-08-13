@@ -14,7 +14,8 @@ export interface BoardType {
     creatorId: number;
     creatorName: string;
     updatedAt: string;
-    updator: number;
+    updatorId: number;
+    updatorName: string;
     isBookMarked: number;
     note: string;
 }
