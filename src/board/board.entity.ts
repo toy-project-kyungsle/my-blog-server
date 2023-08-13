@@ -42,7 +42,7 @@ export class Board extends BaseEntity {
     creatorId: number;
 
     @Column()
-    creatorName: number;
+    creatorName: string;
 
     @Column()
     updatedAt: string;
@@ -51,7 +51,7 @@ export class Board extends BaseEntity {
     updatorId: number;
 
     @Column()
-    updatorName: number;
+    updatorName: string;
 
     @Column()
     isBookMarked: number;
