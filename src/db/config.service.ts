@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
-import { BoardEntity } from 'src/board/board.entity';
+import { Board as BoardEntity } from 'src/board/board.entity';
 // import { Funding } from 'src/funding/funding.entity';
 
 @Injectable()
