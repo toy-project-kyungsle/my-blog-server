@@ -39,7 +39,10 @@ export class Board extends BaseEntity {
     createdAt: string;
 
     @Column()
-    creator: number;
+    creatorId: number;
+
+    @Column()
+    creatorName: number;
 
     @Column()
     updatedAt: string;

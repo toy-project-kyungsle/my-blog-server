@@ -11,7 +11,8 @@ export interface BoardType {
     tags: string;
     status: number;
     createdAt: string;
-    creator: number;
+    creatorId: number;
+    creatorName: string;
     updatedAt: string;
     updator: number;
     isBookMarked: number;
