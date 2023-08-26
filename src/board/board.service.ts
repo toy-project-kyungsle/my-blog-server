@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Board as BoardEntity } from './board.entity';
 import { Repository } from 'typeorm';
@@ -45,5 +45,13 @@ export class BoardService {
         });
         if (!board) throw new NotFoundException(`보드를 찾을 수 없습니다.`);
         return board;
+    }
+
+    async deleteBoardById(boardId: number): Promise<number> {
+        const affectedRowsCnt = (await this.attendantRepository.delete(boardId))
+            .affected;
+        if (affectedRowsCnt === 0)
+            throw new NotFoundException(`삭제할 보드를 찾을 수 없습니다.`);
+        return HttpStatus.ACCEPTED;
     }
 }
