@@ -1,4 +1,12 @@
-import { Get, Controller, Param, Post, Body, Delete } from '@nestjs/common';
+import {
+    Get,
+    Controller,
+    Param,
+    Post,
+    Body,
+    Delete,
+    Put,
+} from '@nestjs/common';
 import {} from '@nestjs/common';
 import { BoardSaveType, BoardType } from './board.type';
 import { BoardService } from './board.service';
@@ -9,7 +17,6 @@ export class BoardController {
 
     @Post('/')
     async createBoard(@Body() createdBoard: BoardSaveType): Promise<BoardType> {
-        console.log(createdBoard);
         return this.boardService.createBoard(createdBoard);
     }
 
@@ -26,6 +33,14 @@ export class BoardController {
     @Get('/type/:type')
     async readBoardsByType(@Param('type') type: string): Promise<BoardType[]> {
         return await this.boardService.readBoardsByType(type);
+    }
+
+    @Put('/:id')
+    async updateBoardById(
+        @Param('id') id: number,
+        @Body() newBoard: BoardType,
+    ): Promise<BoardType> {
+        return this.boardService.updateBoardById(id, newBoard);
     }
 
     @Delete('/:id')
