@@ -1,8 +1,8 @@
 {
-  "name": "project-name",
+  "name": "k world server",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "k world server",
+  "author": "keinn51",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
