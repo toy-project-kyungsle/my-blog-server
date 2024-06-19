@@ -2,7 +2,11 @@
 
 ### 소개
 
-시연영상 https://youtu.be/PC7rBfvsbHY
+시연영상 : https://youtu.be/PC7rBfvsbHY
+
+클라이언트 코드 : https://github.com/toy-project-kyungsle/my-blog-client
+
+이미지 서버 코드 : https://github.com/toy-project-kyungsle/my-blog-image-server
 
 #### ⭐⭐ 이 프로젝트는 라즈베리파이에서 실행하기 위해서 제작했던 프로젝트입니다. ⭐⭐
 
